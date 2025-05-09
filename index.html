@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1512163143273-bde0e2f70344?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+      flex-direction: column;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      color: #e63946;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px 30px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px 30px;
+      font-size: 1rem;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d62828;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #e63946;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .music-control {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="photo" src="https://i.postimg.cc/Kzc5027V/Whats-App-Image-2025-05-09-at-10-54-55-f945eabf.jpg" alt="Her Photo (optional)">
+  <div class="heart">💔</div>
+  <h1>I'm Sorry, My Love</h1>
+  <p>
+    I never meant to hurt you. My heart aches knowing that I caused you pain.<br>
+    You are the light in my world, and every moment without your smile feels empty.<br>
+    Please give me a chance to make it right. I miss you. I love you. Always. 💖
+  </p>
+  <button onclick="alert('I love you. Forever and Always.')">Forgive Me?</button>
+  
+  <div class="music-control" onclick="toggleMusic()">🎵 Play/Stop Music</div>
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+</body>
+</html>
